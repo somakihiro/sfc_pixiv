@@ -6,7 +6,6 @@ class PictureStoriesController < ApplicationController
 
   def create
     @picture_story = PictureStory.create(picture_story_params)
-    binding.pry
     redirect_to @picture_story
   end
 

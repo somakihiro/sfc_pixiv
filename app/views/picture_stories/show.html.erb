@@ -1,5 +1,11 @@
-<%= @picture_story.title %>
+<div class="container">
+<h3><%= @picture_story.title %></h3>
+<div class="main-carousel">
 <% @picture_story.picture_story_orders.each do |order| %>
-  <%= order.story %>
-  <%= image_tag order.iamge.url if order.image? %>
+  <div class="carousel-cell">
+    <p><%= order.story %></p>
+    <%= image_tag order.image if order.image? %>
+  </div>
 <% end %>
+</div>
+</div>

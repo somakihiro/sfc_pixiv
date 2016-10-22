@@ -12,6 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require flickity.pkgd.min
 //= require turbolinks
 //= require_tree .
 //= require cocoon
+
+$(function(){
+  $('.main-carousel').flickity({
+    cellAlign: 'left',
+  });
+})

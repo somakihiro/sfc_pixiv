@@ -83,7 +83,7 @@ class PictureStoriesController < ApplicationController
     def search_image(text)
       encoding_text = CGI.escape(text)
 
-      url = 'https://public-api.secure.pixiv.net/v1/search/works?q=' + encoding_text + '&sort=popular&per_page=20&page=1&image_sizes=small,medium&mode=text'
+      url = "https://public-api.secure.pixiv.net/v1/search/works?q=#{encoding_text}&sort=date&per_page=20&page=1&image_sizes=small,medium&mode=text"
       token = 'Bearer yGJg-FiKrfEYnnITYD0ZPeEOLKTjQr0d9FupYux9gLU'
 
       uri = URI.parse(url)

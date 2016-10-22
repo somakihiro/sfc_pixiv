@@ -1,3 +1,11 @@
 // Place all the styles related to the picture_stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content-fields {
+  width: 100% !important;
+}

@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>SfcPixiv</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet' %>
+  <%= stylesheet_link_tag 'https://code.getmdl.io/1.2.1/material.indigo-pink.min.css', rel='stylesheet' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://code.getmdl.io/1.2.1/material.min.js', defer='defer' %>
   <%= csrf_meta_tags %>
 </head>
 <body>

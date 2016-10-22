@@ -1,0 +1,5 @@
+<%= @picture_story.title %>
+<% @picture_story.picture_story_orders.each do |order| %>
+  <%= order.story %>
+  <%= order.iamge if order.image? %>
+<% end %>

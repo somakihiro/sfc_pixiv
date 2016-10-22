@@ -3,38 +3,66 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @media (max-width: 670px) {
   .content-wrapper {
-    width: 100%;
-  }
-  .title-fields {
     width: 80%;
-    display: block;
     margin: 0 auto;
   }
-  .story-fields {
-    width: 80%;
+
+  .title-fields {
+    width: 100%;
+    margin: 20px 0;
     display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 0;
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
   }
 
-body {
-  width: 95%;
-  height: 95%;
-  margin: 0 auto;
-}
+  .story-wrapper {
+    margin: 35px 0;
+  }
 
-.container {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
+  .story-fields {
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    height: 50px;
+    padding: 5px;
+  }
 
-img {
-  max-width: 90%;
-}
+  .remove-story-fields-btn {
+    float: right;
+    margin: 5px 0 15px !important;
+  }
 
-.carousel-cell {
-  width: 100%;
-  height: 600px;
+  .add-association {
+    padding: 0 !important;
+    margin-bottom: 15px !important;
+    width: 100%;
+    display: block;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  body {
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  img {
+    max-width: 90%;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    height: 600px;
+  }
 }

@@ -1,9 +1,4 @@
-<div class="nested-fields content-wrapper">
-    <div class="mdl-textfield mdl-js-textfield content-fields">
-      <%= f.text_area :story, class: 'mdl-textfield__input', rows: '3', id: 'sample5' %>
-      <%= f.label '内容', class: 'mdl-textfield__label', for: 'sample5' %>
-    </div>
-    <div>
-      <%= link_to_remove_association '削除', f, class: 'mdl-button mdl-js-button mdl-button--raised' %>
-    </div>
+<div class="nested-fields">
+  <%= f.text_area :story, class: 'story-fields' %>
+  <%= link_to_remove_association '削除', f %>
 </div>

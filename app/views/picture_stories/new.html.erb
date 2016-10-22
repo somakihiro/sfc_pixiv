@@ -1,15 +1,12 @@
 <%= form_for(@picture_story) do |f| %>
   <div class="content-wrapper">
-    <div class="mdl-textfield mdl-js-textfield content-fields">
-      <%= f.text_field :title, class: 'mdl-textfield__input', id: 'sample1' %>
-      <%= f.label 'タイトル', class: 'mdl-textfield__label', for: 'sample1' %>
-    </div>
-  </div>
-  <%= f.fields_for :picture_story_orders do |order, index| %>
+    <%= f.text_field :title, class: 'title-fields' %>
+    <%= f.fields_for :picture_story_orders do |order, index| %>
       <%= render 'picture_stories/picture_story_order_fields', f: order %>
-  <% end %>
-  <div class="field">
-    <%= link_to_add_association '話を追加', f, :picture_story_orders, class: 'hoge' %>
+    <% end %>
+    <div class="field">
+      <%= link_to_add_association '話を追加', f, :picture_story_orders %>
+    </div>
+    <%= f.submit '投稿' %>
   </div>
-  <%= f.submit '投稿' %>
 <% end %>

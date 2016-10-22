@@ -1,0 +1,5 @@
+<%= @res.body %>
+
+<% @json.each do |word| %>
+  <li><%= word["surface"] %></li>
+<% end %>

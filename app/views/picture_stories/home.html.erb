@@ -1,8 +1,23 @@
 <div class="container2">
-  <h2>Welcome to Pixiv Story!</h2>
-  物語の文章を考える<br/>↓<br/>投稿する<br/>↓<br/>イラストが自動でマッチング！<br/>↓<br/>絵本の完成！<br/>（どんな絵本になるかはできてからのお楽しみ!）
-  <h5>まずはみんなのストーリーを<br/>見てみましょう！</h5>
-  <%= link_to "Story一覧へ", picture_stories_path, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
-  <h5>最初から自分で<br/>ストーリーをつくるもよし！</h5>
-  <%= link_to "Story作成へ", new_picture_story_path, class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" %>
+  <h3 class="home-title">Pixiv Story</h3>
+  <p class="home-description">Pixiv Storyは暇を持て余した人たちが使う絵本作成サイトです</p>
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp home-card-wide">
+    <div class="mdl-card__title more-story">
+      <h2 class="mdl-card__title-text">物語の文章を考える</h2>
+    </div>
+  </div>
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp home-card-wide">
+    <div class="mdl-card__title more-story">
+      <h2 class="mdl-card__title-text">投稿する</h2>
+    </div>
+  </div>
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp home-card-wide">
+    <div class="mdl-card__title more-story">
+      <h2 class="mdl-card__title-text">イラストが自動でマッチング</h2>
+    </div>
+  </div>
+  <p class="home-description">この3ステップで簡単に自分の絵本を作ることができます。</p>
+  <p class="home-description">早速、自分のストーリーを作ってみましょう！</p>
+  <%= link_to "ストーリー作成へ", new_picture_story_path, class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect home-btn" %>
+  <div class="home-last"></div>
 </div>

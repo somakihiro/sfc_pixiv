@@ -11,10 +11,23 @@
       </div>
     <% end %>
     <div class="carousel-cell">
-      <h2>これでこのストーリーは終わりです！</h2>
-      <%= link_to "他のストーリーを見る", picture_stories_path %>
-      <br/>
-      <%= link_to "自分でストーリーを作る", new_picture_story_path %>
+      <p class="finish-title">これでストーリーはおしまいです。</p>
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title more-story">
+          <h2 class="mdl-card__title-text">Pixiv Story</h2>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <%= link_to "他のストーリーも見てみる", picture_stories_path, class: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect' %>
+        </div>
+      </div>
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title create-story">
+          <h2 class="mdl-card__title-text">Pixiv Story</h2>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <%= link_to "自分でストーリーを作ってみる", new_picture_story_path, class: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect' %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

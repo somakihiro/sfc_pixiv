@@ -4,14 +4,17 @@
     <% @picture_story.picture_story_orders.each do |order| %>
       <div class="carousel-cell">
         <p><%= order.story %></p>
-        <%= image_tag order.image if order.image? %>
+        <% if order.image? %>
+          <% path = order.image.gsub(/[\s\/]/, '') %>
+          <%= image_tag path %>
+        <% end %>
       </div>
     <% end %>
     <div class="carousel-cell">
       <h2>これでこのストーリーは終わりです！</h2>
-      <a href="#">別のストーリーも見る</a>
+      <%= link_to "他のストーリーを見る", picture_stories_path %>
       <br/>
-      <a href="#">ストーリーを作る</a>
+      <%= link_to "自分でストーリーを作る", new_picture_story_path %>
     </div>
   </div>
 </div>

@@ -9,6 +9,7 @@ class PictureStoriesController < ApplicationController
     orders_attributes.each do |key, value|
       text = value[:story]
       words = get_words(text)
+      words ||= {'surface' => '面白'}
       search_words = find_search_words(words)
       count = search_words.length
       if count >= 3
@@ -32,6 +33,14 @@ class PictureStoriesController < ApplicationController
 
   def show
     @picture_story = PictureStory.find(params[:id])
+    orders = @picture_story.picture_story_orders
+    orders.each do |order|
+      save_image_and_get_file_name(order[:image])
+    end
+  end
+
+  def index
+    @picture_stories = PictureStory.all
   end
 
   private
@@ -53,6 +62,9 @@ class PictureStoriesController < ApplicationController
       body = res.body.force_encoding("utf-8")
 
       hash = Hash.from_xml(body)
+      if hash["ResultSet"]["ma_result"]["word_list"].nil?
+        return false
+      end
       result = hash["ResultSet"]["ma_result"]["word_list"]["word"]
       return result
     end
@@ -65,6 +77,7 @@ class PictureStoriesController < ApplicationController
           words.push(word['surface'])
         end
       else
+        binding.pry
         words.push(result['surface'])
       end
       return words
@@ -116,7 +129,7 @@ class PictureStoriesController < ApplicationController
 
       file_name = url.gsub(/[\s\/]/, '')
       File.open("public/images/#{file_name}", "wb") {|f| f.write(@res.body)}
-      return file_name
+      return url
     end
 
 end

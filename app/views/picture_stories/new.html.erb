@@ -1,5 +1,6 @@
 <%= form_for(@picture_story) do |f| %>
   <div class="content-wrapper">
+    <p class="new-story-title">ストーリーを作ろう</p>
     <%= f.text_field :title, class: 'title-fields', placeholder: 'タイトル' %>
     <%= f.fields_for :picture_story_orders do |order, index| %>
       <%= render 'picture_stories/picture_story_order_fields', f: order %>

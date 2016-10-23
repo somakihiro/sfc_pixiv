@@ -52,6 +52,7 @@ img {
     border-radius: 3px;
     height: 30px;
     padding: 5px;
+    font-size: 16px;
   }
 
   .story-wrapper {
@@ -64,6 +65,7 @@ img {
     border-radius: 3px;
     height: 50px;
     padding: 5px;
+    font-size: 16px;
   }
 
   .remove-story-fields-btn {
@@ -80,5 +82,33 @@ img {
 
   .submit-btn {
     width: 100%;
+  }
+
+  .finish-title {
+    font-size: 20px;
+  }
+
+  .demo-card-wide.mdl-card {
+    width: 90%;
+    margin: 0 auto 25px;
+  }
+
+  .demo-card-wide > .more-story {
+    color: #fff;
+    height: 176px;
+    width: 100%;
+    background-image: url('../../images/sample1.jpg');
+    background-position: center;
+  }
+
+  .demo-card-wide > .create-story {
+    color: #fff;
+    height: 176px;
+    width: 100%;
+    background-image: url('../../images/sample2.jpg');
+  }
+
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
   }
 }

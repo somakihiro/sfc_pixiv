@@ -5,7 +5,7 @@
       <%= render 'picture_stories/picture_story_order_fields', f: order %>
     <% end %>
     <div class="fields">
-      <%= link_to_add_association '話を追加', f, :picture_story_orders, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent add-association' %>
+      <%= link_to_add_association 'ストーリーを追加する', f, :picture_story_orders, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent add-association' %>
     </div>
     <%= f.submit '投稿', class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored submit-btn' %>
   </div>

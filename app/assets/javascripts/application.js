@@ -17,14 +17,11 @@
 //= require_tree .
 //= require cocoon
 
-function flickity() {
-  debugger
+$(document).ready(function () {
   var height = screen.availHeight
   $('.container').css("height", height * 0.95 + "px")
   $('.carousel-cell').css("height", (height - 50) + "px")
   $('.main-carousel').flickity({
     cellAlign: 'left',
   });
-}
-
-$(document).ready(flickity)
+});

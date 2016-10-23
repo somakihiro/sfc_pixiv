@@ -77,7 +77,6 @@ class PictureStoriesController < ApplicationController
           words.push(word['surface'])
         end
       else
-        binding.pry
         words.push(result['surface'])
       end
       return words

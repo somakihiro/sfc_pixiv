@@ -1,6 +1,6 @@
 <div class="container">
   <% @picture_stories.each do |pic_story| %>
-    <%= link_to pic_story[:title], pic_story, "data-no-turbolink" => true %>
+    <%= link_to pic_story[:title], pic_story, data: {no_turbolink: true} %>
     <hr />
   <% end %>
 </div>

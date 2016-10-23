@@ -1,6 +1,13 @@
 <div class="container">
+  <h4>ストーリー一覧</h4>
+  <div class="list-action mdl-list">
   <% @picture_stories.each do |pic_story| %>
-    <%= link_to pic_story[:title], pic_story, data: {no_turbolink: true} %>
-    <hr />
+    <div class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        <i class="material-icons mdl-list__item-avatar">star</i>
+        <%= link_to pic_story[:title], pic_story %>
+      </span>
+    </div>
   <% end %>
+  </div>
 </div>

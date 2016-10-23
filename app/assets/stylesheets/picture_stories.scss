@@ -26,6 +26,18 @@ img {
   width: 100%;
 }
 
+.container2 {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mdl-list {
+  width: 70%;
+  margin: 0 auto;
+}
+
 @media (max-width: 670px) {
   .content-wrapper {
     width: 80%;

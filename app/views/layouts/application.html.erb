@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SfcPixiv</title>
+  <title>PixivStory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet' %>
@@ -12,7 +12,29 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">PixivStory</span>
+        <div class="mdl-layout-spacer"></div>
+        <button id="demo-menu-lower-right"
+          class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">more_vert</i>
+        </button>
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+        for="demo-menu-lower-right">
+        <%= link_to "ホーム", root_path, class: "mdl-menu__item", "data-no-turbolink" => true %>
+        <%= link_to "Story作成", new_picture_story_path, class: "mdl-menu__item", "data-no-turbolink" => true %>
+        <%= link_to "Story一覧", picture_stories_path, class: "mdl-menu__item", "data-no-turbolink" => true %>
+      </ul>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <%= yield %>
+    </div>
+  </main>
+</div>
 
 </body>
 </html>

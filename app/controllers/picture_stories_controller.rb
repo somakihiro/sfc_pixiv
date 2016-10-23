@@ -1,4 +1,8 @@
 class PictureStoriesController < ApplicationController
+
+  def home
+  end
+
   def new
     @picture_story = PictureStory.new
     3.times { @picture_story.picture_story_orders.build }
